@@ -15,9 +15,9 @@ class CBOW:
                 for start_index in range(len(self.tokenized_text) - window_size)]
 
     def entry(self, tokenized_list):
-        return Entry(tokenized_list[self.core_index(len(tokenized_list)) - 1],
-                     tokenized_list[:self.core_index(len(tokenized_list)) - 1] +
-                     tokenized_list[self.core_index(len(tokenized_list)):])
+        return Entry(tokenized_list[:self.core_index(len(tokenized_list)) - 1] +
+                     tokenized_list[self.core_index(len(tokenized_list)):],
+                     tokenized_list[self.core_index(len(tokenized_list)) - 1])
 
     def core_index(self, length):
         return int(length / 2 + 1)
