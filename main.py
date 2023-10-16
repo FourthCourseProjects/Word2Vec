@@ -1,16 +1,13 @@
-# This is a sample Python script.
+from TxtReader import TxtReader
+from filter.PunctuationRemover import PunctuationRemover
+from mapper.Lowerizer import Lowerizer
+from mapper.Tokenizer import Tokenizer
+from text_representations.CBOW import CBOW
+from text_representations.Skipgram import SkipGram
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+text = TxtReader().read("data/file1.txt")
+text = PunctuationRemover().remove(text)
+text = text.replace("  ", " ")
+text = Tokenizer().tokenize(Lowerizer().lower(text))
+print(CBOW().from_(text).to_entries(5)[2])
+print(SkipGram().from_(text).to_entries(5)[2])
