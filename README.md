@@ -1,23 +1,32 @@
-# Modelos Word2Vec: CBOW y SkipGram
+# Word2Vec Models: CBOW and SkipGram
+[![Skill Icons](https://skillicons.dev/icons?i=py&perline=2)](https://skillicons.dev)
 
-En este repositorio, se implementan dos populares arquitecturas de Word2Vec: CBOW (Continuous Bag of Words) y SkipGram. Ambos modelos son utilizados para la generación de representaciones vectoriales de palabras, conocidos como embeddings.
+In this repository, two popular Word2Vec architectures are implemented: CBOW (Continuous Bag of Words) and SkipGram. Both models are used for generating vector representations of words, known as embeddings.
 
-## Descripción
+## Description
 
 ### CBOW (Continuous Bag Of Words)
 
-CBOW predice palabras target a partir de palabras de contexto. Dado un conjunto de palabras de contexto, CBOW trata de predecir la palabra en el medio.
+CBOW predicts target words from context words. Given a set of context words, CBOW tries to predict the word in the middle.
 
-**Ejemplo**:
-- Oración: "El gato duerme en la cama".
-- Palabras de contexto: "El", "gato", "en", "la".
-- Palabra target: "duerme".
+**Example**:
+- Sentence: "The cat sleeps on the bed".
+- Context words: "The", "cat", "on", "the".
+- Target word: "sleeps".
 
 ### SkipGram
 
-SkipGram hace lo opuesto a CBOW. Dada una palabra, intenta predecir las palabras de contexto.
+SkipGram does the opposite of CBOW. Given a word, it tries to predict the context words.
 
-**Ejemplo**:
-- Oración: "El gato duerme en la cama".
-- Palabra target: "duerme".
-- Palabras de contexto: "El", "gato", "en", "la".
+**Example**:
+- Sentence: "The cat sleeps on the bed".
+- Target word: "sleeps".
+- Context words: "The", "cat", "on", "the".
+
+---
+## Contact
+
+(c) 2023 José Juan Hernández Gálvez 
+<br>Github: https://github.com/josejuanhernandezgalvez <br>
+(c) 2023 Jorge Lang-Lenton Ferreiro          
+Github: https://github.com/JorgeLLF
